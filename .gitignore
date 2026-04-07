@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# Private — root-level generator, orchestration infrastructure, project config
+/.claude/
+/CLAUDE.md
+
+# Private — study results (domain-specific research output)
+domains/synthetic-audience/studies/
+
+# Local working files
+grok-summary.md
