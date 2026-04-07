@@ -8,5 +8,8 @@ __pycache__/
 # Private — study results (domain-specific research output)
 domains/synthetic-audience/studies/
 
+# Private — local Claude settings with machine-specific paths
+**/.claude/settings.local.json
+
 # Local working files
 grok-summary.md
