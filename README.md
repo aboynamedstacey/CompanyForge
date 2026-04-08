@@ -124,7 +124,3 @@ Optional but useful:
 This project started with a practical question: if you're going to use AI agents for professional work, how should you organize them? Not as a chatbot with a system prompt, and not as an enterprise platform with forty microservices, but as a working organization that scales effort to the task and doesn't pretend agents are people who need meetings and management hierarchies.
 
 The software development domain was built first, by hand. The R&D lab came second. The BBQ domain was the first forge-generated one. It revealed that the forge over-engineered simple domains, which led to conditional infrastructure. Later domains tested the improved forge on more complex work and drove further improvements to execution isolation, self-reinforcement prevention, and calibration.
-
-## License
-
-MIT
