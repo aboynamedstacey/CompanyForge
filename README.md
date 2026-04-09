@@ -111,6 +111,12 @@ The capability types stay the same across tiers. What changes is the number of d
 
 You see the tier estimate before work begins and can override it.
 
+## Install
+
+CompanyForge is available as a [Claude Code plugin](https://github.com/aboynamedstacey/companyforge-plugin). Enable `companyforge` in your plugin settings to get the `/forge` command.
+
+Alternatively, clone this repository and use it directly — the forge skill and shared infrastructure are in `.claude/skills/`.
+
 ## Prerequisites
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI
