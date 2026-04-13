@@ -2,7 +2,7 @@
 
 CompanyForge generates domain-specific AI organizations that run inside [Claude Code](https://docs.anthropic.com/en/docs/claude-code). You describe a professional domain (software development, R&D lab, competitive BBQ) and the system builds a complete organizational structure: capabilities, workflows, quality controls, and cost management. The output is a working Claude Code project you can drop into any directory and start using immediately.
 
-Most agentic AI systems either do too little (one prompt, one loop) or too much (fifteen roles staffed on a two-sentence question). CompanyForge calibrates and provides what's needed, whether it's a solo practitioner for a quick question or a full team with adversarial review for a complex deliverable. The system decides based on the work, not a fixed configuration.
+CompanyForge sizes the organization to the task, from a solo practitioner on a quick question to a full team with adversarial review on a complex deliverable.
 
 ## What It Does
 
@@ -22,21 +22,21 @@ Run `/forge "software-dev"` and CompanyForge will:
 
 ## Why Not a Traditional Org Chart
 
-Human organizational patterns exist because humans need them: hierarchy for coordination, departments for career growth, meetings because people can't see each other's state. CompanyForge avoids these contraints and generates AI-native organizations that provide agents with specialized prompts, fresh instances for review, persistent knowledge across sessions, and conflict resolution rules. 
+Hierarchy, departments, and meetings exist because humans need coordination mechanisms. Agents don't. They need specialized prompts, fresh instances for independent review, persistent knowledge across sessions, and conflict resolution rules. CompanyForge generates organizations around those requirements instead.
 
 ## Design Principles
 
-**Ceremony scales with stakes.** Every task gets sized into tiers. The tier determines staffing, review depth, cost budget, and human gates. 
+**Ceremony scales with stakes.** Every task gets sized into tiers. The tier determines staffing, review depth, cost budget, and human gates.
 
-**Three-pass review on anything that matters.** For medium and large tasks: Capability #1 drafts. A reviewer (always a fresh instance, never the drafter) critiques. Capability #2 synthesizes a final deliverable so that you see one clean output.
+**Three-pass review on anything that matters.** Capability #1 drafts. A reviewer (always a fresh instance, never the drafter) critiques. Capability #2 synthesizes. You see one clean output.
 
-**Natural language routing.** `/dev add authentication`, not `/orchestrate workflow-type "feature" sub-type "auth" tier "medium"`. You talk normally and the system figures out what kind of work it is.
+**Natural language routing.** `/dev add authentication`, not `/orchestrate workflow-type "feature" sub-type "auth" tier "medium"`.
 
-**Deterministic tools before agent opinions.** If a tool can verify it (lint, type check, test, diversity metrics, math check), the tool's answer is authoritative. Agent judgment is for things tools can't check.
+**Deterministic tools before agent judgment.** If a tool can verify it (lint, type check, test, math check), the tool is authoritative.
 
-**Infrastructure is conditional.** Not every domain needs document processing, execution modes, or formal iteration protocols. The forge evaluates what the domain requires and skips what it doesn't.
+**Infrastructure is conditional.** Not every domain needs document processing, execution modes, or formal iteration protocols. The forge skips what the domain doesn't need.
 
-**Economics are explicit.** Model selection is a staffing decision, not a default. Cost tracking, budget alerts, and spend reporting are built into every workflow.
+**Economics are explicit.** Model selection by judgment required. Cost tracking, budget alerts, and spend reporting built into every workflow.
 
 ## Included Domains
 
@@ -107,7 +107,7 @@ The system evaluates your request against domain-specific signals and assigns a 
 | Medium | Scout → Builder → Verifier → Reviewer (parallel) → cross-model | Three-pass + parallel checklists | Architecture + PR |
 | Large | Full pipeline, parallel work units, mid-point checkpoint | Everything | All gates |
 
-The capability types stay the same across tiers. What changes is the number of dispatches.
+The capability types stay the same across tiers, but what changes is the number of dispatches.
 
 You see the tier estimate before work begins and can override it.
 
@@ -127,6 +127,6 @@ Optional but useful:
 
 ## Background
 
-This project started with a practical question: if you're going to use AI agents for professional work, how should you organize them? Not as a chatbot with a system prompt, and not as an enterprise platform with forty microservices, but as a working organization that scales effort to the task and doesn't pretend agents are people who need meetings and management hierarchies.
+Most agentic setups copy human organizational structures: CTO agents, PM agents, engineering manager agents. But computers don't coordinate the way people do. This project started from that observation. If we're going to organize AI agents for professional work, the structure should be optimized for how agents actually operate, not mapped from an org chart.
 
-The software development domain was built first, by hand. The R&D lab came second. The BBQ domain was the first forge-generated one. It revealed that the forge over-engineered simple domains, which led to conditional infrastructure. Later domains tested the improved forge on more complex work and drove further improvements to execution isolation, self-reinforcement prevention, and calibration.
+The software development domain was built first, by hand. The R&D lab came second. BBQ was the first forge-generated domain, and it revealed that the forge over-engineered simple domains, which led to conditional infrastructure. Later domains drove improvements to execution isolation, self-reinforcement prevention, and calibration.
