@@ -1,15 +1,22 @@
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
 
-# Private — root-level generator, orchestration infrastructure, project config
-/.claude/
-/CLAUDE.md
+.DS_Store
+*.log
+*.tmp
+.env
+.env.*
 
-# Private — study results (domain-specific research output)
-domains/synthetic-audience/studies/
+.claude/
+CLAUDE.md
+**/settings.local.json
 
-# Private — local Claude settings with machine-specific paths
-**/.claude/settings.local.json
-
-# Local working files
-grok-summary.md
+studies/
+**/studies/
+_local/
+_private/
+scratch/
